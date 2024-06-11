@@ -45,6 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(moveVirus, 2000);
 
+    const showAdditionalPopup = () => {
+    setTimeout(() => {
+        createPopup(window.innerWidth / 2, window.innerHeight / 2); // Cria um pop-up no centro da tela
+    }, 500); // Aguarda 500 milissegundos após remover o pop-up anterior
+};
+
     virusContainer.addEventListener("mouseover", () => {
         moveVirus();
     });
