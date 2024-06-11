@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "Boo!",
     ];
 
+  
+
+
     const moveVirus = () => {
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
@@ -28,17 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const createPopup = (x, y) => {
         const popup = document.createElement("div");
-        popup.className = "pop-up";
-        popup.style.left = `${x}px`;
-        popup.style.top = `${y}px`;
-        popup.innerText = getRandomMessage();
-        document.body.appendChild(popup);
+    popup.className = "pop-up";
+    popup.style.left = `${x}px`;
+    popup.style.top = `${y}px`;
+    popup.innerText = getRandomMessage();
+    document.body.appendChild(popup);
 
+
+        
         setTimeout(() => {
-            document.body.removeChild(popup);
-        }, 3000);
+            movePopupOut(popup); // Anima o pop-up para fora da tela após um certo tempo
+        }, 2000);
     };
-
+      
     const getRandomMessage = () => {
         return messages[Math.floor(Math.random() * messages.length)];
     };
