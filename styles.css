@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#virus-container {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.5s ease;
+}
+
+#virus {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.pop-up {
+    position: absolute;
+    background: white;
+    border: 2px solid black;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+}
