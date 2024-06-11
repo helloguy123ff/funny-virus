@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const virusContainer = document.getElementById("virus-container");
     const virus = document.getElementById("virus");
@@ -10,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "Boo!",
     ];
 
-    
     const moveVirus = () => {
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
@@ -44,19 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(moveVirus, 2000);
 
-    virusContainer.addEventListener("click", (e) => {
-        e.stopPropagation(); // Impede a propagação do evento para que não seja detectado como um clique na janela
-        moveVirus(); // Mova o vírus aleatoriamente quando for clicado
-        document.body.style.cursor = "url('virus.png'), auto"; // Defina o cursor como a imagem do vírus
-    });
-
-    document.body.addEventListener("click", () => {
-        document.body.style.cursor = "default"; // Restaura o cursor padrão quando o corpo é clicado
-    });
-
-    document.body.addEventListener("mousemove", (e) => {
-        virusContainer.style.left = `${e.clientX - virusContainer.offsetWidth / 2}px`; // Centra o vírus na posição do cursor horizontalmente
-        virusContainer.style.top = `${e.clientY - virusContainer.offsetHeight / 2}px`; // Centra o vírus na posição do cursor verticalmente
+    virusContainer.addEventListener("mouseover", () => {
+        moveVirus();
     });
 });
 
