@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Boo!",
     ];
 
+    
     const moveVirus = () => {
         const screenWidth = window.innerWidth;
         const screenHeight = window.innerHeight;
